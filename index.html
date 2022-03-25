@@ -9,8 +9,6 @@
   <script>
     function runApp() {
       liff.getProfile().then(profile => {
-        document.getElementById("pictureUrl").src = profile.pictureUrl;
-        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         window.uid = profile.userId;
       }).catch(err => console.error(err));
     }
