@@ -27,9 +27,6 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
-
-    var uid = profile.userProfile;
-
   </script>
 
   <div id="my-reform"></div>
@@ -37,7 +34,7 @@
   <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
-      var furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + uid;
+      var furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + userProfile;
       Reform('init', {
           url: furl,
           target: '#my-reform',
