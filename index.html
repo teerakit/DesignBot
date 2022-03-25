@@ -19,7 +19,7 @@
       liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
-        uid = profile.userId;
+        let uid = profile.userId;
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
@@ -34,8 +34,7 @@
   <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
-      var uid2 = uid;
-      let furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + uid2;
+      let furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + uid;
       Reform('init', {
           url: furl,
           target: '#my-reform',
