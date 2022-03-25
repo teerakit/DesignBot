@@ -8,10 +8,6 @@
   </style>
 </head>
 <body>
-  <div id="my-reform"></div>
-  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
-  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
-
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
     function runApp() {
@@ -31,12 +27,22 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
-
-    Reform('init', {
-        url: 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=',
-        target: '#my-reform',
-        background: 'default',
-    })
   </script>
+
+
+  <div id="my-reform"></div>
+
+  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
+  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
+  <script>
+      Reform('init', {
+          url: 'https://forms.reform.app/frdgco/register/00f6ly',
+          target: '#my-reform',
+          background: 'default',
+      })
+  </script>
+
+
+
 </body>
 </html>
