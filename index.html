@@ -9,7 +9,7 @@
   <script>
     function runApp() {
       liff.getProfile().then(profile => {
-        window.uid = profile.userId;
+        uid = profile.userId;
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
@@ -24,7 +24,7 @@
   <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
-    alert(window.uid);
+    alert(this.uid);
       Reform('init', {
           url: "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + window.uid,
           target: '#my-reform',
