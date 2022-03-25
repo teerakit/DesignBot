@@ -30,5 +30,18 @@
       }
     }, err => console.error(err.code, error.message));
   </script>
+
+  <div id="my-reform"></div>
+  
+  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
+  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
+  <script>
+      Reform('init', {
+          url: 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + uid,
+          target: '#my-reform',
+          background: 'default',
+      })
+  </script>
+  
 </body>
 </html>
