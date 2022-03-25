@@ -17,7 +17,7 @@
             const statusMessage = profile.statusMessage;
             const pictureUrl = profile.pictureUrl;
             const email = liff.getDecodedIDToken().email;
-            var furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + userProfile.value;
+            var furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + profile.userProfile;
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
@@ -33,7 +33,7 @@
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
     Reform('init', {
-        url: furl.value,
+        url: profile.furl,
         target: '#my-reform',
         background: 'default',
     })
