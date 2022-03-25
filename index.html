@@ -8,7 +8,10 @@
   </style>
 </head>
 <body>
+  <div id="my-reform"></div>
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
+  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
+  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
     function runApp() {
         liff.getProfile().then(profile => {
@@ -19,6 +22,7 @@
             const email = liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
+
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
       if (liff.isLoggedIn()) {
         runApp()
@@ -26,13 +30,7 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
-  </script>
 
-  <div id="my-reform"></div>
-
-  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
-  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
-  <script>
       var furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + userProfile;
       Reform('init', {
           url: furl,
