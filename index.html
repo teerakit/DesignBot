@@ -11,14 +11,14 @@
       liff.getProfile().then(profile => {
         window.uid = profile.userId;
         uid2 = profile.userId;
-        alert(window.uid);
-        alert(uid);
-        alert(uid2);
+        alert("1" + window.uid);
+        alert("2" + uid);
+        alert("3" + uid2);
         alert(profile.userId);
       }).catch(err => console.error(err));
-      alert(window.uid);
-      alert(uid);
-      alert(uid2);
+      alert("4" + window.uid);
+      alert("5" + uid);
+      alert("6" + uid2);
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
       if (liff.isLoggedIn()) {
@@ -27,13 +27,13 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
-    alert(window.uid);
+    alert("7" + window.uid);
   </script>
   <div id="my-reform"></div>
   <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
-    alert(window.uid);
+    alert("8" + window.uid);
       Reform('init', {
           url: "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid,
           target: '#my-reform',
