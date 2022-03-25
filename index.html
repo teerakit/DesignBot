@@ -12,12 +12,11 @@
   <script>
     function runApp() {
         liff.getProfile().then(profile => {
-            var userProfile = profile.userId;
+            const userProfile = profile.userId;
             const displayName = profile.displayName;
             const statusMessage = profile.statusMessage;
             const pictureUrl = profile.pictureUrl;
             const email = liff.getDecodedIDToken().email;
-
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
