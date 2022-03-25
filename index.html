@@ -15,7 +15,7 @@
   <script>
     function runApp() {
         liff.getProfile().then(profile => {
-            const userProfile = profile.userId;
+            var userProfile = profile.userId;
             const displayName = profile.displayName;
             const statusMessage = profile.statusMessage;
             const pictureUrl = profile.pictureUrl;
