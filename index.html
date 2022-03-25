@@ -27,8 +27,9 @@
   <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
+    var rurl = document.getElementById("hiddenVar").getAttribute("myAttr");
     Reform('init', {
-          url: document.getElementById("hiddenVar").getAttribute("myAttr"),
+          url: rurl,
           target: '#my-reform',
           background: 'default',
         })
