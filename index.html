@@ -9,7 +9,7 @@
   <script>
     function runApp() {
       liff.getProfile().then(profile => {
-        window.uid = profile.userId;
+        window.uid = profile.userId.value;
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
