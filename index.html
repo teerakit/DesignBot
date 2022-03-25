@@ -10,9 +10,11 @@
     function runApp() {
       liff.getProfile().then(profile => {
         window.uid = profile.userId;
+        uid2 = profile.userId;
       }).catch(err => console.error(err));
       alert(window.uid);
       alert(uid);
+      alert(uid2);
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
       if (liff.isLoggedIn()) {
