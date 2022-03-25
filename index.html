@@ -11,6 +11,7 @@
       liff.getProfile().then(profile => {
         window.uid = profile.userId;
       }).catch(err => console.error(err));
+      alert(window.uid);
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
       if (liff.isLoggedIn()) {
