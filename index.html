@@ -7,14 +7,10 @@
 <body>
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
-    var furl = "unknown";
-    var window.furl = "unknown2";
-    alert(furl);
-    alert(window.furl);
     function runApp() {
       liff.getProfile().then(profile => {
         var uid = profile.userId;
-        furl = "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid;
+        window.furl = "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid;
         alert("1 " + furl);
       }).catch(err => console.error(err));
     }
