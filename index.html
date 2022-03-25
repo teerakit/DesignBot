@@ -1,0 +1,20 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ลงทะเบียน</title>
+</head>
+<body>
+<script>
+  const page = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=';
+  const queryString = decodeURIComponent(window.location.search).replace("?liff.state=", "");
+  const params = new URLSearchParams(queryString);
+  const id = params.get('uid');
+  if (id != null && id != '') {
+    window.location.assign(page + id);
+  } else {
+    window.location.assign("https://developers.line.biz");
+  }
+</script>
+</body>
+</html>
