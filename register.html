@@ -1,0 +1,49 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ลงทะเบียน</title>
+  <style>
+    #pictureUrl { display: block; margin: 0 auto }
+  </style>
+</head>
+<body>
+  <img id="pictureUrl" width="25%">
+  <p id="userId"></p>
+  <p id="displayName"></p>
+  <p id="statusMessage"></p>
+  <p id="getDecodedIDToken"></p>
+  <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
+  <script>
+    function runApp() {
+      liff.getProfile().then(profile => {
+        document.getElementById("pictureUrl").src = profile.pictureUrl;
+        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
+        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
+        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+      }).catch(err => console.error(err));
+    }
+    liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
+      if (liff.isLoggedIn()) {
+        runApp()
+      } else {
+        liff.login();
+      }
+    }, err => console.error(err.code, error.message));
+  </script>
+
+  <div id="my-reform"></div>
+  
+  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
+  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
+  <script>
+      Reform('init', {
+          url: 'https://forms.reform.app/frdgco/register/00f6ly',
+          target: '#my-reform',
+          background: 'default',
+      })
+  </script>
+  
+</body>
+</html>
