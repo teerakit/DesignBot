@@ -11,8 +11,6 @@
   <img id="pictureUrl" width="25%">
   <p id="userId"></p>
   <p id="displayName"></p>
-  <p id="statusMessage"></p>
-  <p id="getDecodedIDToken"></p>
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
     function runApp() {
@@ -34,7 +32,7 @@
   <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
-      let furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + uid;
+      furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + uid;
       Reform('init', {
           url: furl,
           target: '#my-reform',
