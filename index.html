@@ -12,7 +12,7 @@
       liff.getProfile().then(profile => {
         var uid = profile.userId;
         var furl = "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid;
-        document.getElementById("hiddenVar").setAttribute("myAttr",furl)
+        document.getElementById("hiddenVar").setAttribute("rurl",furl)
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
@@ -27,7 +27,8 @@
   <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
   <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
-    var rurl = document.getElementById("hiddenVar").getAttribute("myAttr");
+    var rurl = document.getElementById("hiddenVar").getAttribute("rurl");
+    document.getElementById("hiddenVar").innerHTML = rurl;  
     alert("rurl =" + rurl);
     Reform('init', {
           url: rurl,
