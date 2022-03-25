@@ -5,9 +5,6 @@
   <title>ลงทะเบียน</title>
 </head>
 <body>
-  <div id="my-reform"></div>
-  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
-  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
     var furl;
@@ -25,7 +22,11 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
-
+  </script>
+  <div id="my-reform"></div>
+  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
+  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
+  <script>
     alert("2 " + furl);
     Reform('init', {
           url: furl,
@@ -33,6 +34,5 @@
           background: 'default',
         })
   </script>
-  
 </body>
 </html>
