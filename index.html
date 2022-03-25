@@ -13,17 +13,15 @@
     function runApp() {
       liff.getProfile().then(profile => {
         uid = profile.userId;
-        
+        furl = "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid
         
         alert(uid);
+        alert(furl);
         Reform('init', {
           url: "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid,
           target: '#my-reform',
           background: 'default',
         })
-        
-        alert(uid);
-        
         
       }).catch(err => console.error(err));
     }
