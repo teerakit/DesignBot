@@ -11,6 +11,10 @@
       liff.getProfile().then(profile => {
         window.uid = profile.userId;
         uid2 = profile.userId;
+        alert(window.uid);
+        alert(uid);
+        alert(uid2);
+        alert(profile.userId);
       }).catch(err => console.error(err));
       alert(window.uid);
       alert(uid);
