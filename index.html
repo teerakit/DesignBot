@@ -14,9 +14,6 @@
       liff.getProfile().then(profile => {
         var uid = profile.userId;
         var furl = "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid;
-        
-        alert(uid);
-        alert(furl);
         Reform('init', {
           url: furl,
           target: '#my-reform',
