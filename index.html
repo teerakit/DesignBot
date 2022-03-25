@@ -11,6 +11,7 @@
       liff.getProfile().then(profile => {
         var uid = profile.userId;
         furl = "https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=" + uid;
+        alert(furl);
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
