@@ -8,6 +8,10 @@
   </style>
 </head>
 <body>
+  <div id="my-reform"></div>
+  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
+  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
+
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
     function runApp() {
@@ -17,7 +21,7 @@
             const statusMessage = profile.statusMessage;
             const pictureUrl = profile.pictureUrl;
             const email = liff.getDecodedIDToken().email;
-            var furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + profile.userProfile;
+            const furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + profile.userProfile;
       }).catch(err => console.error(err));
     }
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
@@ -27,11 +31,7 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
-  </script>
-  <div id="my-reform"></div>
-  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
-  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
-  <script>
+
     Reform('init', {
         url: profile.furl,
         target: '#my-reform',
