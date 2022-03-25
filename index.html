@@ -2,27 +2,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ลงทะเบียน</title>
+  <title>My LIFF v2</title>
   <style>
     #pictureUrl { display: block; margin: 0 auto }
   </style>
 </head>
 <body>
-  <div id="my-reform"></div>
+  <img id="pictureUrl" width="25%">
+  <p id="userId"></p>
+  <p id="displayName"></p>
+  <p id="statusMessage"></p>
+  <p id="getDecodedIDToken"></p>
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
-  <script>window.Reform=window.Reform||function(){(Reform.q=Reform.q||[]).push(arguments)};</script>
-  <script id="reform-script" async src="https://embed.reform.app/v1/embed.js"></script>
   <script>
     function runApp() {
-        liff.getProfile().then(profile => {
-            var userProfile = profile.userId;
-            const displayName = profile.displayName;
-            const statusMessage = profile.statusMessage;
-            const pictureUrl = profile.pictureUrl;
-            const email = liff.getDecodedIDToken().email;
+      liff.getProfile().then(profile => {
+        document.getElementById("pictureUrl").src = profile.pictureUrl;
+        document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
+        document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
+        document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
+        document.getElementById("getDecodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
-
     liff.init({ liffId: "1657004963-0a8kwk57" }, () => {
       if (liff.isLoggedIn()) {
         runApp()
@@ -30,14 +31,6 @@
         liff.login();
       }
     }, err => console.error(err.code, error.message));
-
-      var furl = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=' + userProfile;
-      Reform('init', {
-          url: furl,
-          target: '#my-reform',
-          background: 'default',
-      })
   </script>
-
 </body>
 </html>
