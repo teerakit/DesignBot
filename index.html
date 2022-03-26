@@ -6,14 +6,14 @@
 </head>
 <body>
 <script>
-  const page = 'https://forms.reform.app/frdgco/register/00f6ly?a2190dcf-c6d2-4494-a179-854f3bcb05b8=';
+  const page = 'https://forms.reform.app/frdgco/register/00f6ly?82bf8f8f-4cb4-4394-be8c-18cf437c7af6=';
   const queryString = decodeURIComponent(window.location.search).replace("?liff.state=", "");
   const params = new URLSearchParams(queryString);
   const id = params.get('uid');
   if (id != null && id != '') {
     window.location.assign(page + id);
   } else {
-    window.location.assign("https://fridaydigital.co");
+    window.location.assign("https://fridaydigital.co/account-exist/");
   }
 </script>
 </body>
